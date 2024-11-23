@@ -1,0 +1,141 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(75px);  /* Start 20px below final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);     /* End at natural position */
+    }
+}
+
+
+.Bilde {
+    max-width: 45%;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 0.85s ease-in forwards;
+    border-radius: 0
+}
+
+.Galleri {
+    padding-top: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 300px;
+}
+
+.Galleri img:last-child{
+    padding-bottom: 250px;
+}
+
+.Navnet {
+    position: fixed;
+    top: 80px;
+    left: 52px;
+    display: inline-block;
+    text-align: left;
+    font-size: 23px;
+    color: #11161c;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.Navnet a {
+    text-decoration: none;
+    color: #091018;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Navnet a:hover{
+    color: black;
+}
+
+.Meny {
+    position: fixed;
+    top: 180px;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 325;
+    line-height: 1.5;
+    left: 35px;
+}
+
+.Meny a {
+    text-decoration: none;
+    color: #343d4a;
+    font-family: "Karla", sans-serif;
+}
+
+.Meny a:hover {
+    color:#000000;
+}
+
+.Meny li {
+    padding-bottom: 3px;
+}
+
+.About {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Changed from center to flex-start */
+    padding-left: calc(50% - 190px); /* Centers the content while maintaining left alignment */
+    min-height: calc(100vh - 300px)
+}
+
+.About p {
+    font-size: 22px;
+    font-family: Karla, sans-serif;
+    animation: fadeInUp 1.5s ease-out forwards;
+    max-width: 400px;
+    word-wrap: break-word;
+    color:#28384d;
+    font-weight: 325;
+    text-align: left;
+}
+
+.About-header {
+    font-size: 27px;
+    text-align: left;
+    color: #28384d;
+    padding-bottom: 25px;
+    animation: fadeInUp 1.5s ease-out forwards;
+
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #161e29;
+    padding: 20px 0;
+    font-family: "Karla", sans-serif;
+    line-height: 1.65;
+}
+
+footer:hover {
+    cursor: default;
+}
+
+.About .Contact {
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.About .Contact a {
+color: #28384d;
+text-decoration: underline;
+}
