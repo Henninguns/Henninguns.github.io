@@ -145,8 +145,9 @@ text-decoration: underline;
     .Navnet {
         position: static;
         text-align: center;
-        margin: 20px 0;
+        margin: 0px 0;
         padding-top: 20px;
+        padding-left: 20px;
     }
 
     .Meny {
@@ -163,7 +164,7 @@ text-decoration: underline;
 
     .Galleri {
         padding-top: 20px;
-        gap: 50px;
+        gap: 150px;
     }
 
     .Bilde {
@@ -171,8 +172,9 @@ text-decoration: underline;
     }
 
     .About {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 28px;
+        padding-left: 30px;
+        padding-right: 30px;
         align-items: center;
     }
 
@@ -184,7 +186,13 @@ text-decoration: underline;
 
     .About-header {
         font-size: 24px;
-        text-align: center;
+        text-align: left;
+        margin-left: 40px;
         width: 100%;
+    }
+    
+    .About .Contact {
+        margin-left: 10px;
+        text-align: left;
     }
 }
