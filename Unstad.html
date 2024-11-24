@@ -30,19 +30,4 @@
 <footer>
     <p>&copy; 2024 Henning Unstad. All rights reserved<br>Made with love (and some sweat and frustration)</p>
 </footer>
-
 </html>
-
-
-<script>
-    const images = Array.from(document.querySelectorAll('.Bilde[data-src]'));
-    
-    async function loadImagesSequentially() {
-        for (const img of images) {
-            img.src = img.dataset.src;
-            await new Promise(resolve => img.onload = resolve);
-        }
-    }
-    
-    loadImagesSequentially();
-</script>
