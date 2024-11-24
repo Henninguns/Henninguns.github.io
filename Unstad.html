@@ -21,9 +21,9 @@
     </ul>
 
     <main class="Galleri">
-        <img src="IMG_2455-2.jpg" alt="Solnedgang fra Landegode" class="Bilde">
-        <img src="IMG_1145.jpg" alt="Skitur fra Trysil" class="Bilde">
-        <img src="IMG_1690.jpg" alt="Bading i Lofoten" class="Bilde">
+        <img src="IMG_2455-2.jpg" class="Bilde" loading="eager">
+        <img src="IMG_1145.jpg" class="Bilde">
+        <img src="IMG_1690.jpg" class="Bilde">
     </main>
 </body>
 
@@ -32,3 +32,17 @@
 </footer>
 
 </html>
+
+
+<script>
+    const images = Array.from(document.querySelectorAll('.Bilde[data-src]'));
+    
+    async function loadImagesSequentially() {
+        for (const img of images) {
+            img.src = img.dataset.src;
+            await new Promise(resolve => img.onload = resolve);
+        }
+    }
+    
+    loadImagesSequentially();
+</script>
