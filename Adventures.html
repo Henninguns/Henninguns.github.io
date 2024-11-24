@@ -21,7 +21,7 @@
     </ul>
 
     <main class="Galleri">
-        <img src="IMG_3412.jpg" class="Bilde">
+        <img src="IMG_3412.jpg" class="Bilde" loading="eager">
         <img src="IMG_1437.jpg" class="Bilde">
         <img src="IMG_0668.jpg" class="Bilde">
         <img src="IMG_3260.jpg" class="Bilde">
@@ -35,16 +35,3 @@
         <footer>
             <p>&copy; 2024 Henning Unstad. All rights reserved<br>Made with love (and some sweat and frustration)</p>
         </footer>
-
-        <script>
-            const images = Array.from(document.querySelectorAll('.Bilde[data-src]'));
-            
-            async function loadImagesSequentially() {
-                for (const img of images) {
-                    img.src = img.dataset.src;
-                    await new Promise(resolve => img.onload = resolve);
-                }
-            }
-            
-            loadImagesSequentially();
-        </script>
