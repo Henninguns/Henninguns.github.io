@@ -20,7 +20,7 @@
 
 
 .Bilde {
-    max-width: 45%;
+    max-width: 30%;
     height: auto;
     opacity: 0;
     animation: fadeIn 0.85s ease-in forwards;
